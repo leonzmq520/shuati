@@ -33,17 +33,17 @@ public class SortIntegersII {
 	 */
 	public void mergeSort(int[] A) {
 		int left = 0, right = A.length - 1;
-		sort(A, left, right);
+		mSort(A, left, right);
 	}
 
-	private void sort(int[] A, int left, int right) {
+	private void mSort(int[] A, int left, int right) {
 		if (left < right) {
 			// Find the middle point
 			int mid = left + (right - left) / 2;
 
 			// Sort first and second halves
-			sort(A, left, mid);
-			sort(A, mid + 1, right);
+			mSort(A, left, mid);
+			mSort(A, mid + 1, right);
 
 			// Merge the sorted halves
 			merge(A, left, mid, right);
@@ -105,16 +105,79 @@ public class SortIntegersII {
 	 *            an integer array
 	 * @return: nothing
 	 */
-	public void quikeSort(int[] A) {
+	public void quickSort(int[] A) {
+		int left = 0, right = A.length - 1;
+		qSort(A, left, right);
+	}
+
+	/*
+	 * The main function that implements QuickSort() arr[] --> Array to be
+	 * sorted,
+	 * 
+	 * low --> Starting index, high --> Ending index
+	 */
+	private void qSort(int arr[], int low, int high) {
+		if (low < high) {
+			/*
+			 * pi is partitioning index, arr[pi] is now at right place
+			 */
+			int pi = partition(arr, low, high);
+
+			// Recursively sort elements before
+			// partition and after partition
+			qSort(arr, low, pi - 1);
+			qSort(arr, pi + 1, high);
+		}
+	}
+
+	/*
+	 * This function takes last element as pivot, places the pivot element at
+	 * its correct position in sorted array, and places all smaller (smaller
+	 * than pivot) to left of pivot and all greater elements to right of pivot
+	 */
+	private int partition(int arr[], int low, int high) {
+		int pivot = arr[high];
+		int i = (low - 1); // index of smaller element
+		for (int j = low; j < high; j++) {
+			// If current element is smaller than or
+			// equal to pivot
+			if (arr[j] <= pivot) {
+				i++;
+
+				// swap arr[i] and arr[j]
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+
+		// swap arr[i+1] and arr[high] (or pivot)
+		int temp = arr[i + 1];
+		arr[i + 1] = arr[high];
+		arr[high] = temp;
+
+		return i + 1;
 	}
 
 	public static void main(String[] args) throws IOException {
 		SortIntegersII si2 = new SortIntegersII();
+
 		int[] numbers = { 19, -10, -2, 40, 3, 36, 57, 25, 66, 51, 5, 40, -8, 43, 9, -5, 0, 4, 55, 28, 63, 67, -2, 35,
 				57, 0, 0, 30, 17, 55, 22, 34, -4, 42, 57, 52, 4, 65, 6, -2, 8, 12, 31, 43, 26, 34, 31, 19, -3, 36, 34,
 				11, 58, 23, 13, 7, 17, 10, 33, -5, 10, 53, 14, 56, 18, 8, -6, -2, 37, 7 };
+		int[] duplicatedNumbers = numbers;
+		// Merge Sort
 		si2.mergeSort(numbers);
 		System.out.printf("Merge Sort: [");
+		for (int number : numbers) {
+			System.out.printf(" " + number);
+		}
+		System.out.printf(" ]");
+		System.out.println();
+
+		// Quick Sort
+		si2.quickSort(duplicatedNumbers);
+		System.out.printf("Quick Sort: [");
 		for (int number : numbers) {
 			System.out.printf(" " + number);
 		}
