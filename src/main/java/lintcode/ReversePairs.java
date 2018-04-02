@@ -65,12 +65,12 @@ public class ReversePairs {
 		return sum;
 	}
 
-	private int merge(int[] A, int start, int mid, int end) {
+	private long merge(int[] A, int start, int mid, int end) {
 		int[] temp = new int[A.length];
 		int leftIndex = start;
 		int rightIndex = mid + 1;
 		int index = start;
-		int sum = 0;
+		long sum = 0;
 
 		while (leftIndex <= mid && rightIndex <= end) {
 			if (A[leftIndex] <= A[rightIndex]) {
