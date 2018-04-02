@@ -1,4 +1,4 @@
-package lintcode;
+package lintcode.sort;
 
 import java.io.IOException;
 

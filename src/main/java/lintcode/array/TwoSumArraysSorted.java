@@ -1,4 +1,4 @@
-package lintcode;
+package lintcode.array;
 
 import java.io.IOException;
 import java.util.HashMap;
