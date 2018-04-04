@@ -178,7 +178,7 @@ public class SortIntegersII {
 		// Quick Sort
 		si2.quickSort(duplicatedNumbers);
 		System.out.printf("Quick Sort: [");
-		for (int number : numbers) {
+		for (int number : duplicatedNumbers) {
 			System.out.printf(" " + number);
 		}
 		System.out.printf(" ]");
