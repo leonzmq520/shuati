@@ -38,7 +38,7 @@ public class TopKLargestNumbers {
 	 * @return: the top k largest numbers in array
 	 */
 	public int[] getTopk(int[] nums, int k) {
-		List<Integer> results = new ArrayList<Integer>();
+		List<Integer> results = new ArrayList<>();
 		if (nums == null || nums.length < 0 || k < 0 || nums.length < k) {
 			return convertIntegers(results);
 		}
@@ -79,7 +79,7 @@ public class TopKLargestNumbers {
 	public int[] topk(int[] nums, int k) {
 		int[] topK = new int[k];
 		Comparator<Integer> comparator = new topKComparator();
-		PriorityQueue<Integer> pq = new PriorityQueue<Integer>(k, comparator);
+		PriorityQueue<Integer> pq = new PriorityQueue<>(k, comparator);
 
 		for (int i = 0; i < nums.length; i++) {
 			pq.offer(nums[i]);
