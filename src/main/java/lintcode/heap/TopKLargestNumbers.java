@@ -3,8 +3,10 @@ package lintcode.heap;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * 544. Top k Largest Numbers
@@ -65,14 +67,45 @@ public class TopKLargestNumbers {
 		return ret;
 	}
 
+	/*
+	 * Using PriorityQueue with Comparator
+	 * 
+	 * @param nums an integer array
+	 * 
+	 * @param k an integer
+	 * 
+	 * @return the top k largest numbers in array
+	 */
+	public int[] topk(int[] nums, int k) {
+		int[] topK = new int[k];
+		Comparator<Integer> comparator = new topKComparator();
+		PriorityQueue<Integer> pq = new PriorityQueue<Integer>(k, comparator);
+
+		for (int i = 0; i < nums.length; i++) {
+			pq.offer(nums[i]);
+		}
+		for (int i = 0; i < k; i++) {
+			topK[i] = pq.poll();
+		}
+		return topK;
+	}
+
+	/**
+	 * changing array into ascending numerical order (Max Heap)
+	 */
+	public class topKComparator implements Comparator<Integer> {
+		@Override
+		public int compare(Integer o1, Integer o2) {
+			return o1 > o2 ? -1 : 1;
+		}
+	}
+
 	public static void main(String[] args) throws IOException {
 		TopKLargestNumbers topk = new TopKLargestNumbers();
 		int[] numbers = { 3, 10, 1000, -99, 4, 100 };
 		int k = 3;
-		System.out.printf("[");
-		for (int number : topk.getTopk(numbers, k)) {
-			System.out.printf(" " + number);
-		}
-		System.out.printf("]");
+		System.out.println(Arrays.toString(topk.getTopk(numbers, k)));
+		System.out.println(Arrays.toString(topk.topk(numbers, k)));
+
 	}
 }
