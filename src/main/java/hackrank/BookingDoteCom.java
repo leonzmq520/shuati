@@ -1,10 +1,12 @@
 package hackrank;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class BookingDoteCom {
 
@@ -14,7 +16,7 @@ public class BookingDoteCom {
 	static String[] packNumbers(int[] arr) {
 		
 		String[] res = { "5:3", "7:2", "3", "4", "7" };
-		ArrayList<int[]>  l= new  ArrayList<int[]>(Arrays.asList(arr));
+		ArrayList<int[]>  l= new  ArrayList<>(Arrays.asList(arr));
         System.out.println(l);   
 
 		
