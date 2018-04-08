@@ -1,6 +1,5 @@
 package lintcode.array;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,15 +62,5 @@ public class TwoSum {
 			map.put(numbers[i], i);
 		}
 		throw new IllegalArgumentException("No two sum solution");
-	}
-
-	public static void main(String[] args) throws IOException {
-		TwoSum ts = new TwoSum();
-		int[] numbers = { 1, 0, -1 };
-		int target = -1;
-		int[] result = new int[2];
-		result = ts.twoSum(numbers, target);
-		System.out.printf("[" + result[0] + ", " + result[1] + "]");
-
 	}
 }

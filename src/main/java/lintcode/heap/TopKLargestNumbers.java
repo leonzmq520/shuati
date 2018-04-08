@@ -1,6 +1,5 @@
 package lintcode.heap;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -98,14 +97,5 @@ public class TopKLargestNumbers {
 		public int compare(Integer o1, Integer o2) {
 			return o1 > o2 ? -1 : 1;
 		}
-	}
-
-	public static void main(String[] args) throws IOException {
-		TopKLargestNumbers topk = new TopKLargestNumbers();
-		int[] numbers = { 3, 10, 1000, -99, 4, 100 };
-		int k = 3;
-		System.out.println(Arrays.toString(topk.getTopk(numbers, k)));
-		System.out.println(Arrays.toString(topk.topk(numbers, k)));
-
 	}
 }

@@ -1,7 +1,5 @@
 package lintcode.sort;
 
-import java.io.IOException;
-
 /**
  * 532. Reverse Pairs
  * 
@@ -92,14 +90,5 @@ public class ReversePairs {
 		}
 
 		return sum;
-	}
-
-	public static void main(String[] args) throws IOException {
-		ReversePairs rp = new ReversePairs();
-		int[] numbers = { 2, 4, 1, 3, 5 };
-		int[] duplicatedNumbers = numbers;
-		System.out.println(" Total Reverse Pairs: " + rp.getReversePairs(numbers));
-		System.out.printf(" Total Reverse Pairs with Merge sort: " + rp.reversePairs(duplicatedNumbers));
-
 	}
 }

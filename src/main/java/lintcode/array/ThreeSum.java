@@ -1,6 +1,5 @@
 package lintcode.array;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -89,21 +88,5 @@ public class ThreeSum {
 				right--;
 			}
 		}
-	}
-
-	public static void main(String[] args) throws IOException {
-		ThreeSum ts = new ThreeSum();
-		int[] numbers = { -2, -3, 5, -1, -4, 5, -11, 7, 1, 2, 3, 4, -7, -1, -2, -3, -4, -5 };
-		List<List<Integer>> results = ts.threeSum(numbers);
-		System.out.printf("result: [");
-		for (List<Integer> result : results) {
-			System.out.printf(" [");
-			for (int number : result) {
-				System.out.printf(" " + number);
-			}
-			System.out.printf(" ]");
-		}
-		System.out.printf(" ]");
-
 	}
 }

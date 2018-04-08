@@ -1,7 +1,5 @@
 package lintcode.sort;
 
-import java.io.IOException;
-
 /**
  * 464. Sort Integers II
  * 
@@ -157,30 +155,5 @@ public class SortIntegersII {
 		arr[high] = temp;
 
 		return i + 1;
-	}
-
-	public static void main(String[] args) throws IOException {
-		SortIntegersII si2 = new SortIntegersII();
-
-		int[] numbers = { 19, -10, -2, 40, 3, 36, 57, 25, 66, 51, 5, 40, -8, 43, 9, -5, 0, 4, 55, 28, 63, 67, -2, 35,
-				57, 0, 0, 30, 17, 55, 22, 34, -4, 42, 57, 52, 4, 65, 6, -2, 8, 12, 31, 43, 26, 34, 31, 19, -3, 36, 34,
-				11, 58, 23, 13, 7, 17, 10, 33, -5, 10, 53, 14, 56, 18, 8, -6, -2, 37, 7 };
-		int[] duplicatedNumbers = numbers;
-		// Merge Sort
-		si2.mergeSort(numbers);
-		System.out.printf("Merge Sort: [");
-		for (int number : numbers) {
-			System.out.printf(" " + number);
-		}
-		System.out.printf(" ]");
-		System.out.println();
-
-		// Quick Sort
-		si2.quickSort(duplicatedNumbers);
-		System.out.printf("Quick Sort: [");
-		for (int number : duplicatedNumbers) {
-			System.out.printf(" " + number);
-		}
-		System.out.printf(" ]");
 	}
 }

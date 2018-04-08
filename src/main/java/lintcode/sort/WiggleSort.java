@@ -1,7 +1,5 @@
 package lintcode.sort;
 
-import java.io.IOException;
-
 /**
  * 508. Wiggle Sort
  * 
@@ -46,16 +44,5 @@ public class WiggleSort {
 				nums[i] = temp;
 			}
 		}
-	}
-
-	public static void main(String[] args) throws IOException {
-		WiggleSort ws = new WiggleSort();
-		int[] numbers = { 3, 5, 2, 1, 6, 4 };
-		ws.wiggleSort(numbers);
-		System.out.printf("result: [");
-		for (int number : numbers) {
-			System.out.printf(" " + number);
-		}
-		System.out.printf(" ]");
 	}
 }

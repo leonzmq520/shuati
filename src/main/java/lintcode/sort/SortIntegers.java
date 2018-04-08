@@ -1,7 +1,5 @@
 package lintcode.sort;
 
-import java.io.IOException;
-
 /**
  * 463. Sort Integers
  * 
@@ -42,16 +40,5 @@ public class SortIntegers {
 				}
 			}
 		}
-	}
-
-	public static void main(String[] args) throws IOException {
-		SortIntegers si = new SortIntegers();
-		int[] numbers = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };
-		si.bubbleSort(numbers);
-		System.out.printf("Bubble Sort: [");
-		for (int number : numbers) {
-			System.out.printf(" " + number);
-		}
-		System.out.printf(" ]");
 	}
 }
