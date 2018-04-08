@@ -94,7 +94,7 @@ local.properties
 .idea/
 
 ## .gitignore for linux
-.*
+#.*
 !.gitignore
 *~
 
