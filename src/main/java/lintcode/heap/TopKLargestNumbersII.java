@@ -65,13 +65,13 @@ import java.util.PriorityQueue;
  */
 public class TopKLargestNumbersII {
 	private int maxSize;
-	private PriorityQueue<Integer> maxheap;
+	private PriorityQueue<Integer> minheap;
 
 	/*
 	 * @param k: An integer
 	 */
 	public TopKLargestNumbersII(int k) {
-		maxheap = new PriorityQueue<>(k);
+		minheap = new PriorityQueue<>(k);
 		maxSize = k;
 	}
 
@@ -81,13 +81,13 @@ public class TopKLargestNumbersII {
 	 * @return: nothing
 	 */
 	public void add(int num) {
-		if (maxheap.size() < maxSize) {
-			maxheap.add(num);
+		if (minheap.size() < maxSize) {
+			minheap.add(num);
 			return;
 		}
-		if (num > maxheap.peek()) {
-			maxheap.poll();
-			maxheap.add(num);
+		if (num > minheap.peek()) {
+			minheap.poll();
+			minheap.add(num);
 		}
 
 	}
@@ -96,7 +96,7 @@ public class TopKLargestNumbersII {
 	 * @return: Top k element
 	 */
 	public List<Integer> topk() {
-		Iterator<Integer> it = maxheap.iterator();
+		Iterator<Integer> it = minheap.iterator();
 		List<Integer> results = new ArrayList<>();
 
 		while (it.hasNext()) {
