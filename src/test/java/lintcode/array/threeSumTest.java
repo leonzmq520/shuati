@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class threeSumTest {
+public class ThreeSumTest {
 	@Test
 	public void shouldGetThreeSum() {
 		// given
