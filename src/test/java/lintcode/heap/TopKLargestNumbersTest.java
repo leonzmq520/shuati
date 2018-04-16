@@ -1,6 +1,6 @@
 package lintcode.heap;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TopKLargestNumbersTest {
@@ -16,6 +16,6 @@ public class TopKLargestNumbersTest {
 		int[] result = topKLargestNumbers.topk(numbers, k);
 
 		// then
-		Assert.assertArrayEquals(expecteds, result);
+		Assert.assertEquals(expecteds, result);
 	}
 }

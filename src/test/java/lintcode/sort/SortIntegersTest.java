@@ -1,6 +1,6 @@
 package lintcode.sort;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SortIntegersTest {
@@ -15,6 +15,6 @@ public class SortIntegersTest {
 		sortIntegers.bubbleSort(numbers);
 
 		// then
-		Assert.assertArrayEquals(expecteds, numbers);
+		Assert.assertEquals(expecteds, numbers);
 	}
 }

@@ -2,7 +2,7 @@ package lintcode.heap;
 
 import java.util.List;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TopKLargestNumbersIITest {
@@ -27,26 +27,26 @@ public class TopKLargestNumbersIITest {
 		topKLargestNumbersII.add(i2);
 		List<Integer> result1 = topKLargestNumbersII.topk();
 		// then case 1
-		Assert.assertArrayEquals(expecteds1, result1.toArray());
+		Assert.assertEquals(expecteds1, result1.toArray());
 
 		// when case 2
 		topKLargestNumbersII.add(i3);
 		topKLargestNumbersII.add(i4);
 		List<Integer> result2 = topKLargestNumbersII.topk();
 		// then case 2
-		Assert.assertArrayEquals(expecteds2, result2.toArray());
+		Assert.assertEquals(expecteds2, result2.toArray());
 
 		// when case 3
 		topKLargestNumbersII.add(i5);
 		List<Integer> result3 = topKLargestNumbersII.topk();
 		// then case 3
-		Assert.assertArrayEquals(expecteds3, result3.toArray());
+		Assert.assertEquals(expecteds3, result3.toArray());
 
 		// when case 4
 		topKLargestNumbersII.add(i6);
 		List<Integer> result4 = topKLargestNumbersII.topk();
 		// then case 4
-		Assert.assertArrayEquals(expecteds4, result4.toArray());
+		Assert.assertEquals(expecteds4, result4.toArray());
 
 	}
 }

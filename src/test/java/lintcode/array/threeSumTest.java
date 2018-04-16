@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ThreeSumTest {
@@ -68,6 +68,6 @@ public class ThreeSumTest {
 		List<List<Integer>> results = threeSum.threeSum(numbers);
 
 		// then
-		Assert.assertArrayEquals(expecteds.toArray(), results.toArray());
+		Assert.assertEquals(expecteds.toArray(), results.toArray());
 	}
 }

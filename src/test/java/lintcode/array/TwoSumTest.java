@@ -1,6 +1,6 @@
 package lintcode.array;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TwoSumTest {
@@ -16,6 +16,6 @@ public class TwoSumTest {
 		int[] results = twoSum.twoSum(numbers, target);
 
 		// then
-		Assert.assertArrayEquals(expecteds, results);
+		Assert.assertEquals(expecteds, results);
 	}
 }

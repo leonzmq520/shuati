@@ -1,6 +1,6 @@
 package lintcode.heap;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TopKFrequentWordsTest {
@@ -18,11 +18,11 @@ public class TopKFrequentWordsTest {
 		// when case 1
 		String[] results1 = topKFrequentWords.getTopKFrequentWords(words, k1);
 		// then case 1
-		Assert.assertArrayEquals(expecteds1, results1);
+		Assert.assertEquals(expecteds1, results1);
 
 		// when case 2
 		String[] results2 = topKFrequentWords.getTopKFrequentWords(words, k2);
 		// then case 1
-		Assert.assertArrayEquals(expecteds2, results2);
+		Assert.assertEquals(expecteds2, results2);
 	}
 }

@@ -1,6 +1,6 @@
 package lintcode.string;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ReverseWordsTest {

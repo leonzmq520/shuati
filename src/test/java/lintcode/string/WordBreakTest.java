@@ -3,7 +3,7 @@ package lintcode.string;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WordBreakTest {

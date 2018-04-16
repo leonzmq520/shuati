@@ -1,6 +1,6 @@
 package lintcode.sort;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WiggleSortTest {
@@ -15,7 +15,7 @@ public class WiggleSortTest {
 		wiggleSort.wiggleSort(numbers);
 
 		// then
-		Assert.assertArrayEquals(expecteds, numbers);
+		Assert.assertEquals(expecteds, numbers);
 	}
 
 }
