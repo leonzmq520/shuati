@@ -26,7 +26,7 @@ package lintcode.array;
  * Tags: LinkedIn Subarray Greedy LintCode Copyright Microsoft Bloomberg Array
  * Enumeration
  * 
- * 
+ * Ref: https://en.wikipedia.org/wiki/Maximum_subarray_problem
  * 
  * @author fakezmq
  *
